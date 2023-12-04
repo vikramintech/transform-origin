@@ -1,35 +1,52 @@
+/* css variables */
+:root{
+    --primary:#060914;
+    --white:#E4E4E4;
+    --highlight:#E50914;
+    --mono: monospace;
+}
+
+
+/* base resets */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
+ /* main body */
 body{
-    background:#060914;
-    color: #E4E4E4;
+    background:var(--primary);
+    color: var(--white);
 }
+/* heading */
 h1{
     text-align:center;
     margin-top: 1.5rem;
 }
+/* main section */
 main{
     text-align: center;
     margin-top:3.3rem;
 }
+/* content inside paragraphs */
 .content{
     margin-top: 6.7rem;
     font-size:1.3rem;
 }
+/* class given to transform -origin text inside paragraph */
 .property{
-    font-family:monospace;
+    font-family:var(--mono);
 }
+/* class given to span tags inside paragraph tag */
 .xy,.z,.property{
-    color:#E50914;
+    color: var(--highlight);
+    font-family:var(--mono)
 }
+/* container for the implementation of transform- origin */
 .box1{
     height: 241px;
     width:241px;
-    border: 1px solid #E4E4E4;
+    border: 1px solid var(--white);
     border-radius:1rem;
     margin:0 auto;
     margin-top:3.7rem;
@@ -37,23 +54,25 @@ main{
     justify-content: center;
     align-items: center;
 
-
+/* child for the container with class box1 */
 }
 .box2{
     height: 133px;
     width:133px;
-    background-color: #E50914;
-    border:1px solid #E50914;
+    background-color: var(--highlight);
+    border:0px solid var(--highlight);
     border-radius: 5rem;
     transform: rotate(45deg);
     transform-origin: right bottom ;
 }
+/* utility class */
 .p2{
     padding:0.2rem;
 }
+
 button{
     margin-top:3rem;
     border-radius: 0.4rem;
-    background-color: #E50914 ;
-    color:#E4E4E4;
+    background-color:var(--highlight) ;
+    color:var(--white);
 }
